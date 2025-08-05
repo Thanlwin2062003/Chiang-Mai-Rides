@@ -3,211 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chiang Mai Rides - Motorcycle and car rentals in Chiang Mai, Thailand. Explore Northern Thailand at your own pace.">
     <title>Chiang Mai Rides - Motorcycle & Car Rentals</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- Navigation Bar -->
     <header class="navbar">
         <div class="container">
             <div class="logo">
-                <h1><i class="fas fa-motorcycle"></i> Chiang Mai Rides</h1>
+                <h1><i class="fas fa-motorcycle" aria-hidden="true"></i> Chiang Mai Rides</h1>
                 <span>Explore Northern Thailand</span>
             </div>
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="motorbikes.html">Motorbikes</a></li>
-                    <li><a href="cars.html">Cars</a></li>
-                    <li><a href="tours.html">Tours</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="booked.html" class="btn-book">Book Now</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#motorbikes">Motorbikes</a></li>
+                    <li><a href="#cars">Cars</a></li>
+                    <li><a href="#tours">Tours</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Rent Your Perfect Ride in Chiang Mai</h2>
-                <p>Explore the mountains, temples, and countryside at your own pace</p>
-                <div class="search-box">
-                    <div class="search-tabs">
-                        <button class="tab-btn active" data-tab="motorbike">Motorbikes</button>
-                        <button class="tab-btn" data-tab="car">Cars</button>
-                    </div>
-                    <form id="search-form">
-                        <div class="form-group">
-                            <label for="pickup-date"><i class="far fa-calendar-alt"></i> Pickup Date</label>
-                            <input type="date" id="pickup-date" required>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 id="hero-heading">Rent Your Perfect Ride in Chiang Mai</h2>
+                    <p>Explore the mountains, temples, and countryside at your own pace</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Motorbikes Section -->
+        <section id="motorbikes" class="section vehicles" aria-labelledby="motorbikes-heading">
+            <div class="container">
+                <h2 id="motorbikes-heading" class="section-title">Popular Motorbikes</h2>
+                <p class="section-subtitle">Best options for exploring Chiang Mai's scenic routes</p>
+                
+                <div class="vehicle-grid">
+                    <article class="vehicle-card" data-category="scooter">
+                        <div class="vehicle-image">
+                            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Honda PCX 150 scooter">
                         </div>
-                        <div class="form-group">
-                            <label for="dropoff-date"><i class="far fa-calendar-alt"></i> Dropoff Date</label>
-                            <input type="date" id="dropoff-date" required>
+                        <div class="vehicle-info">
+                            <h3>Honda PCX 150</h3>
+                            <div class="vehicle-specs">
+                                <span><i class="fas fa-motorcycle" aria-hidden="true"></i> Scooter</span>
+                                <span><i class="fas fa-tachometer-alt" aria-hidden="true"></i> 150cc</span>
+                                <span><i class="fas fa-gas-pump" aria-hidden="true"></i> 45km/L</span>
+                            </div>
+                            <div class="vehicle-price">
+                                <span class="price">฿250/day</span>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="vehicle-type"><i class="fas fa-car"></i> Vehicle Type</label>
-                            <select id="vehicle-type">
-                                <option value="">All Types</option>
-                                <option value="scooter">Scooter</option>
-                                <option value="motorbike">Motorbike</option>
-                                <option value="sedan">Sedan</option>
-                                <option value="suv">SUV</option>
-                                <option value="pickup">Pickup Truck</option>
-                            </select>
+                    </article>
+
+                    <article class="vehicle-card" data-category="motorbike">
+                        <div class="vehicle-image">
+                            <img src="https://images.unsplash.com/photo-1558980394-4c7c9299fe96?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Honda CB500X motorbike">
                         </div>
-                        <button type="submit" class="search-btn">Find Vehicles <i class="fas fa-search"></i></button>
-                    </form>
+                        <div class="vehicle-info">
+                            <h3>Honda CB500X</h3>
+                            <div class="vehicle-specs">
+                                <span><i class="fas fa-motorcycle" aria-hidden="true"></i> Motorbike</span>
+                                <span><i class="fas fa-tachometer-alt" aria-hidden="true"></i> 500cc</span>
+                                <span><i class="fas fa-gas-pump" aria-hidden="true"></i> 30km/L</span>
+                            </div>
+                            <div class="vehicle-price">
+                                <span class="price">฿800/day</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Popular Motorbikes Section -->
-    <section id="motorbikes" class="section vehicles">
-        <div class="container">
-            <h2 class="section-title">Popular Motorbikes</h2>
-            <p class="section-subtitle">Best options for exploring Chiang Mai's scenic routes</p>
-            
-            <div class="vehicle-grid">
-                <!-- Vehicles will be loaded by JavaScript -->
+        <!-- Popular Cars Section -->
+        <section id="cars" class="section vehicles" aria-labelledby="cars-heading">
+            <div class="container">
+                <h2 id="cars-heading" class="section-title">Popular Cars</h2>
+                <p class="section-subtitle">Comfortable rides for families and groups</p>
+                
+                <div class="vehicle-grid">
+                    <article class="vehicle-card" data-category="sedan">
+                        <div class="vehicle-image">
+                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Toyota Camry sedan">
+                        </div>
+                        <div class="vehicle-info">
+                            <h3>Toyota Camry</h3>
+                            <div class="vehicle-specs">
+                                <span><i class="fas fa-car" aria-hidden="true"></i> Sedan</span>
+                                <span><i class="fas fa-users" aria-hidden="true"></i> 5 seats</span>
+                                <span><i class="fas fa-gas-pump" aria-hidden="true"></i> Petrol</span>
+                            </div>
+                            <div class="vehicle-price">
+                                <span class="price">฿1,200/day</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
-            
-            <div class="section-footer">
-                <a href="motorbikes.html" class="view-all">View All Motorbikes <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Popular Cars Section -->
-    <section id="cars" class="section vehicles">
-        <div class="container">
-            <h2 class="section-title">Popular Cars</h2>
-            <p class="section-subtitle">Comfortable rides for families and groups</p>
-            
-            <div class="vehicle-grid">
-                <!-- Vehicles will be loaded by JavaScript -->
-            </div>
-            
-            <div class="section-footer">
-                <a href="cars.html" class="view-all">View All Cars <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="section benefits">
-        <div class="container">
-            <h2 class="section-title">Why Choose Chiang Mai Rides</h2>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-thumbs-up"></i>
-                    </div>
-                    <h3>Quality Vehicles</h3>
-                    <p>All our vehicles are well-maintained and regularly serviced</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3>Best Routes</h3>
-                    <p>Get personalized recommendations for scenic routes</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>24/7 Support</h3>
-                    <p>English-speaking support available anytime</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Full Insurance</h3>
-                    <p>Comprehensive coverage for peace of mind</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section testimonials">
-        <div class="container">
-            <h2 class="section-title">What Our Customers Say</h2>
-            
-            <div class="testimonial-slider">
-                <div class="testimonial active">
-                    <div class="rating">★★★★★</div>
-                    <p>"Renting a scooter from Chiang Mai Rides made our trip unforgettable. The staff helped us plan an amazing route to Doi Suthep!"</p>
-                    <div class="author">- Sarah, Australia</div>
-                </div>
-                <div class="testimonial">
-                    <div class="rating">★★★★☆</div>
-                    <p>"Great service and well-maintained bikes. We rented for a week with no issues at all. Will definitely use them again next time."</p>
-                    <div class="author">- Mark, UK</div>
-                </div>
-                <div class="testimonial">
-                    <div class="rating">★★★★★</div>
-                    <p>"The pickup truck was perfect for our family trip to Pai. Comfortable ride and excellent customer service throughout."</p>
-                    <div class="author">- The Johnson Family, USA</div>
-                </div>
-            </div>
-            
-            <div class="slider-controls">
-                <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
-                <div class="slider-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-                <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Contact Us</h2>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Nimmanhaemin Road, Chiang Mai</p>
-                    <p><i class="fas fa-phone"></i> +66 123 456 789</p>
-                    <p><i class="fas fa-envelope"></i> info@chiangmairides.com</p>
-                    <p><i class="fas fa-clock"></i> Open daily 8:00 - 20:00</p>
+        <!-- Why Choose Us Section -->
+        <section class="section benefits" aria-labelledby="benefits-heading">
+            <div class="container">
+                <h2 id="benefits-heading" class="section-title">Why Choose Chiang Mai Rides</h2>
+                
+                <div class="benefits-grid">
+                    <article class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-thumbs-up" aria-hidden="true"></i>
+                        </div>
+                        <h3>Quality Vehicles</h3>
+                        <p>All our vehicles are well-maintained and regularly serviced</p>
+                    </article>
                     
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-line"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <article class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3>Best Routes</h3>
+                        <p>Get personalized recommendations for scenic routes</p>
+                    </article>
+                    
+                    <article class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-headset" aria-hidden="true"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>English-speaking support available anytime</p>
+                    </article>
+                    
+                    <article class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3>Full Insurance</h3>
+                        <p>Comprehensive coverage for peace of mind</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section testimonials" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <h2 id="testimonials-heading" class="section-title">What Our Customers Say</h2>
+                
+                <div class="testimonial-slider">
+                    <div class="testimonial active">
+                        <div class="rating" aria-label="5 out of 5 stars">★★★★★</div>
+                        <blockquote>
+                            <p>"Renting a scooter from Chiang Mai Rides made our trip unforgettable. The staff helped us plan an amazing route to Doi Suthep!"</p>
+                            <footer>- Sarah, Australia</footer>
+                        </blockquote>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="rating" aria-label="4 out of 5 stars">★★★★☆</div>
+                        <blockquote>
+                            <p>"Great service and well-maintained bikes. We rented for a week with no issues at all. Will definitely use them again next time."</p>
+                            <footer>- Mark, UK</footer>
+                        </blockquote>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="rating" aria-label="5 out of 5 stars">★★★★★</div>
+                        <blockquote>
+                            <p>"The pickup truck was perfect for our family trip to Pai. Comfortable ride and excellent customer service throughout."</p>
+                            <footer>- The Johnson Family, USA</footer>
+                        </blockquote>
                     </div>
                 </div>
                 
-                <div class="contact-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3776.258010304649!2d98.95690831537934!3d18.79604098725338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a7a0b1d0b6d%3A0x5f5e5e5e5e5e5e5e!2sNimmanhaemin%20Road%2C%20Chiang%20Mai!5e0!3m2!1sen!2sth!4v1620000000000!5m2!1sen!2sth" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="slider-controls">
+                    <button class="slider-btn prev" aria-label="Previous testimonial"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                    <div class="slider-dots">
+                        <button class="dot active" aria-label="Testimonial 1"></button>
+                        <button class="dot" aria-label="Testimonial 2"></button>
+                        <button class="dot" aria-label="Testimonial 3"></button>
+                    </div>
+                    <button class="slider-btn next" aria-label="Next testimonial"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h2 id="contact-heading">Contact Us</h2>
+                        <address>
+                            <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 Nimmanhaemin Road, Chiang Mai</p>
+                            <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+66123456789">+66 123 456 789</a></p>
+                            <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@chiangmairides.com">info@chiangmairides.com</a></p>
+                            <p><i class="fas fa-clock" aria-hidden="true"></i> Open daily 8:00 - 20:00</p>
+                        </address>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" aria-label="Line">
+                                <i class="fab fa-line"></i>
+                            </a>
+                            <a href="#" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section" aria-labelledby="map-heading">
+            <div class="container">
+                <h2 id="map-heading" class="section-title">Our Location</h2>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3776.258010304649!2d98.95690831537934!3d18.79604098725338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a7a0b1d0b6d%3A0x5f5e5e5e5e5e5e5e!2sNimmanhaemin%20Road%2C%20Chiang%20Mai!5e0!3m2!1sen!2sth!4v1620000000000!5m2!1sen!2sth" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" title="Our location on Google Maps"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What documents do I need to rent a vehicle?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You'll need a valid passport and an international driver's permit (IDP) along with your home country driver's license. For Thai nationals, just your Thai driver's license is sufficient.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you offer one-way rentals?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer one-way rentals to several destinations in Northern Thailand including Pai, Chiang Rai, and Mae Hong Son. Additional fees may apply depending on the distance.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is your cancellation policy?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Cancellations made more than 48 hours before pickup receive a full refund. Within 48 hours, a 50% cancellation fee applies. No-shows are charged the full rental amount.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is insurance included in the rental price?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>All rentals include basic insurance with a deductible. You can upgrade to zero-deductible insurance for an additional daily fee when you pick up your vehicle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h3><i class="fas fa-motorcycle"></i> Chiang Mai Rides</h3>
+                    <h3><i class="fas fa-motorcycle" aria-hidden="true"></i> Chiang Mai Rides</h3>
                     <p>Your trusted rental partner in Northern Thailand</p>
                 </div>
                 
@@ -221,6 +308,7 @@
                             <li><a href="#">Special Offers</a></li>
                         </ul>
                     </div>
+                    
                     <div class="footer-column">
                         <h4>Support</h4>
                         <ul>
@@ -230,6 +318,7 @@
                             <li><a href="#">Roadside Assistance</a></li>
                         </ul>
                     </div>
+                    
                     <div class="footer-column">
                         <h4>Company</h4>
                         <ul>
@@ -243,17 +332,22 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 Chiang Mai Rides. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2025</span> Chiang Mai Rides. All rights reserved.</p>
                 <div class="payment-methods">
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                    <i class="fas fa-money-bill-wave"></i>
+                    <span class="sr-only">Accepted payment methods:</span>
+                    <i class="fab fa-cc-visa" aria-hidden="true"></i>
+                    <i class="fab fa-cc-mastercard" aria-hidden="true"></i>
+                    <i class="fab fa-cc-paypal" aria-hidden="true"></i>
+                    <i class="fas fa-money-bill-wave" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Update copyright year automatically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
